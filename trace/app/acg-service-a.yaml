@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-trace-acg-a
+  labels:
+    app: cloud-trace-acg-app-a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloud-trace-acg-app-a
+  template:
+    metadata:
+      name: cloud-trace-acg-a
+      labels:
+        app: cloud-trace-acg-app-a
+    spec:
+      containers:
+      - name: cloud-trace-acg-container
+        image: gcr.io/[PROJECT_ID]/acg-image:latest
+        command:
+        - python
+        args:
+        - app.py
+        - --keyword=Hello
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloud-trace-acg-a
+spec:
+  selector:
+    app: cloud-trace-acg-app-a
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
