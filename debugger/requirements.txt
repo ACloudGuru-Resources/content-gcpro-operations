@@ -1,2 +1,5 @@
 Flask==1.1.2
 google-python-cloud-debugger==2.15
+
+# Forcing use of pyparsing < 3 due to issues in Nov 2021 with >3
+pyparsing==2.4.7
