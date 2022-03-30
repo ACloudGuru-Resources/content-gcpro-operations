@@ -2,10 +2,11 @@ google-cloud-monitoring==0.36.0
 google-cloud-trace==0.24.0
 opencensus==0.7.10
 Jinja2==3.0.3
+Werkzeug==2.0.3
+itsdangerous==2.0.1
 Flask==1.1.2
 opencensus-ext-stackdriver==0.7.3
 opencensus-ext-flask==0.7.3
 opencensus-context==0.1.1
 grpcio==1.32.0
 httpretty==1.0.2
-itsdangerous==2.0.1
