@@ -1,5 +1,7 @@
+Jinja2==3.0.3
+Werkzeug==2.0.3
+itsdangerous==2.0.1
 Flask==1.1.2
 google-python-cloud-debugger==2.15
-itsdangerous==2.0.1
 # Forcing use of pyparsing < 3 due to issues in Nov 2021 with >3
 pyparsing==2.4.7
